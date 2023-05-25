@@ -1,43 +1,156 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!doctype html>
+<html>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+	<head>
+		<meta charset="utf-8">
+		<title>杨雨生个人网页</title>
+		<style type="text/css">
+			/* CSS Document */
+			* {
+				margin: 0;
+				padding: 0;
+			}
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+			a {
+				text-decoration: none;
+			}
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+			.clearfix:after {
+				content: "";
+				display: block;
+				height: 0;
+				visibility: hidden;
+				clear: both;
+			}
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+			.clearfix {
+				*zoom: 1;
+			}
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+			body {
+				background: url(https://gitee.com/vmu/cimg/raw/master/img/bg.jpg) no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+
+			.content {
+				width: 900px;
+				height: 500px;
+				margin: 200px auto 0 auto;
+				border-radius: 10px;
+				background-color: rgba(236, 236, 236, 0.59);
+				transition: all 1.0s;
+				/*box-shadow: 0px 0px 20px rgba(0,0,0,0.3);*/
+			}
+
+			.content img {
+				float: left;
+				width: 200px;
+				height: 200px;
+				margin: 150px 0 0 80px;
+				border-radius: 100px;
+
+			}
+
+			.content:hover {
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.52);
+			}
+
+			.content_r {
+				float: right;
+				width: 500px;
+				margin: 80px 60px 0 0;
+				/*	background-color: pink;*/
+			}
+
+			.content_l {
+				float: left;
+				width: 100%;
+				text-align: center;
+			}
+
+			.content_l h5 {
+
+				font-size: 17px;
+			}
+
+			.cc {
+				margin-top: 10px;
+				color: #1F2023;
+				font-size: 18px;
+			}
+
+			.color_1 {
+				color: #4855EC;
+				font-size: 18px;
+			}
+
+			.deeppink {
+				color: deeppink;
+			}
+
+			.link {
+				margin-top: 30px;
+			}
+
+			.link a {
+				display: block;
+				float: left;
+				width: 120px;
+				height: 45px;
+				margin: 5px 5px 0 0;
+				/*	padding: 0 15px;*/
+				color: #fff;
+				line-height: 45px;
+				transition: all 0.8s;
+				/*	background-color: deeppink;*/
+
+			}
+
+			.link a:hover {
+				background-color: rgba(0, 201, 243, 0.35);
+			}
+
+			.deeppink_1 {
+				background-color: deeppink;
+			}
+
+			.dodgerblue {
+				background-color: dodgerblue;
+			}
+
+			.magenta {
+				background-color: magenta;
+			}
+
+			.orange {
+				background-color: orange;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			<img src="https://gitee.com/vmu/cimg/raw/master/img/ch.jpg" alt="">
+			<div class="content_r clearfix">
+				<div class="content_l clearfix">
+					<h2>Hi~ 我是杨雨生， Welcome here ！</h2>
+					<p class="cc">欢迎来到我的主页~</p>
+					<p class="cc">欢迎参观</p>
+					<br>
+					<p class="color_1">I am an ambitious salted fish!</p>
+					<p class=“color_1”>b</白日依山尽 >
+					<br>
+					<p class="deeppink">黄河入海流</p>
+					<p class="deeppink">As long as the road is right, you are not afraid of the distance.</p>
+					<div class="link">
+						<a href="#" class="dodgerblue" target="_blank">官网</a>
+						<a href="https://im.qq.com/index/" class="deeppink_1" target="_blank">QQ</a>
+						<a href="https://music.163.com/" class="orange" target="_blank">网易云音乐</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
