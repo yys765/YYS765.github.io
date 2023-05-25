@@ -28,7 +28,7 @@
 			}
 
 			body {
-				background: url(https://gitee.com/vmu/cimg/raw/master/img/bg.jpg) no-repeat;
+				background: url(http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1305/16/c4/20990657_1368686545122.jpg) no-repeat;
 				background-size: cover;
 				background-attachment: fixed;
 			}
